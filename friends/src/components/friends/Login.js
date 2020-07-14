@@ -8,7 +8,7 @@ const initialValue = {
 };
 
 const Login = props => {
-  const [values, handleChanges] = useForm(initialValue);
+  const [values, setValues, handleChanges] = useForm(initialValue);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -19,6 +19,8 @@ const Login = props => {
         props.history.push('/protected');
       })
       .catch(err => console.log(err));
+
+    setValues(initialValue);
   };
   return (
     <form onSubmit={handleSubmit}>

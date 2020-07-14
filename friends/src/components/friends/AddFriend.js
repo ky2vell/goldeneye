@@ -9,7 +9,7 @@ const initialValue = {
 };
 
 const AddFriend = ({ setFriends }) => {
-  const [values, handleChanges] = useForm(initialValue);
+  const [values, setValues, handleChanges] = useForm(initialValue);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -17,6 +17,8 @@ const AddFriend = ({ setFriends }) => {
       .post('/api/friends', values)
       .then(res => setFriends(res.data))
       .catch(err => console.log(err));
+
+    setValues(initialValue);
   };
 
   return (
