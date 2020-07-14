@@ -47,7 +47,7 @@ const Header = () => {
           </svg>
         </Link>
         <div className='nav-right'>
-          {friends.length > 0 && <Link to='/friends'>Friends</Link>}
+          {friends.length > 0 && <Link to='/players'>Players</Link>}
           {friends.length > 0 ? (
             <a href='/' onClick={() => window.localStorage.removeItem('token')}>
               Logout

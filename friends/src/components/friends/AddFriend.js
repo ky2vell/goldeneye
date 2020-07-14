@@ -4,8 +4,8 @@ import { axiosWithAuth } from '../../utils/axiosWithAuth';
 
 const initialValue = {
   name: '',
-  age: '',
-  email: ''
+  weapon: '',
+  img: ''
 };
 
 const AddFriend = ({ setFriends }) => {
@@ -22,36 +22,39 @@ const AddFriend = ({ setFriends }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor='name'>Name:</label>
-      <input
-        id='name'
-        type='text'
-        name='name'
-        value={values.name}
-        onChange={handleChanges}
-        placeholder='Name..'
-      />
-      <label htmlFor='age'>Age:</label>
-      <input
-        id='age'
-        type='number'
-        name='age'
-        value={values.age}
-        onChange={handleChanges}
-        placeholder='Age..'
-      />
-      <label htmlFor='email'>Age:</label>
-      <input
-        id='email'
-        type='email'
-        name='email'
-        value={values.email}
-        onChange={handleChanges}
-        placeholder='Email..'
-      />
-      <button className='submit'>Submit!</button>
-    </form>
+    <div className='player-form'>
+      <h1>Add Player</h1>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor='name'>Name:</label>
+        <input
+          id='name'
+          type='text'
+          name='name'
+          value={values.name}
+          onChange={handleChanges}
+          placeholder='Name..'
+        />
+        <label htmlFor='weapon'>Weapon of Choice:</label>
+        <input
+          id='weapon'
+          type='text'
+          name='weapon'
+          value={values.weapon}
+          onChange={handleChanges}
+          placeholder='Weapon..'
+        />
+        <label htmlFor='img'>Player Image URL:</label>
+        <input
+          id='img'
+          type='url'
+          name='img'
+          value={values.img}
+          onChange={handleChanges}
+          placeholder='Image..'
+        />
+        <button className='submit'>Submit!</button>
+      </form>
+    </div>
   );
 };
 

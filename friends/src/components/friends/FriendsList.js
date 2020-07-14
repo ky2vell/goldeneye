@@ -30,25 +30,26 @@ const FriendsList = () => {
   };
 
   return (
-    <>
+    <div className='container'>
       <AddFriend setFriends={setFriends} />
       {isLoading ? (
-        <h3>Data is Loading...</h3>
+        <h1 className='loading'>Players are Loading...</h1>
       ) : (
-        friends.map(friend => (
-          <div className='friend' key={friend.id}>
-            <ul>
-              <li>Name: {friend.name}</li>
-              <li>Age: {friend.age}</li>
-              <li>Email: {friend.email}</li>
-              <button onClick={e => deleteFriend(e, friend.id)}>
-                Delete Friend
-              </button>
-            </ul>
-          </div>
-        ))
+        <h1 className='loading'>Characters</h1>
       )}
-    </>
+      <div className='player-wrapper'>
+        {friends.map(friend => (
+          <div className='player' key={friend.id}>
+            <img src={friend.img} alt='character' />
+            <span>Name: {friend.name}</span>
+            <span>Weapon: {friend.weapon}</span>
+            <button onClick={e => deleteFriend(e, friend.id)}>
+              Terminate Player
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 

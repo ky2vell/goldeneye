@@ -18,13 +18,11 @@ function App() {
     <FriendsContext.Provider value={{ friends, setFriends }}>
       <Router>
         <Header />
-        <div className='container'>
-          <Switch>
-            <PrivateRoute path='/friends' component={FriendsList} />
-            <Route path='/login' component={Login} />
-            <Route path='/' component={Home} />
-          </Switch>
-        </div>
+        <Switch>
+          <PrivateRoute path='/players' component={FriendsList} />
+          <Route path='/login' component={Login} />
+          <Route path='/' component={Home} />
+        </Switch>
       </Router>
     </FriendsContext.Provider>
   );
