@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+  height: 100vh;
+  background: #010101;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1500px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.hero {
+  height: 100vh;
+  background-image: url(/static/media/Goldeneye2.64220f3b.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 55%;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  max-width: 1500px;
+  padding: 0 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 0;
+}
+
+#logo {
+  height: 60px;
+}
+
+.nav-right a {
+  background-color: #fff;
+  color: #010101;
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.4s opacity ease-out;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 2px;
+  line-height: 2.5rem;
+  padding: 0 1rem;
+  margin: 0 0.5rem;
+  text-transform: uppercase;
+}

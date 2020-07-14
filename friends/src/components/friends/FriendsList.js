@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { axiosWithAuth } from '../../utils/axiosWithAuth';
+
+import { FriendsContext } from '../../contexts/friendsContext';
 
 import AddFriend from './AddFriend';
 
 const FriendsList = () => {
-  const [friends, setFriends] = useState([]);
+  const { friends, setFriends } = useContext(FriendsContext);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -15,6 +17,7 @@ const FriendsList = () => {
         setIsLoading(false);
       })
       .catch(err => console.log(err));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const deleteFriend = (e, id) => {

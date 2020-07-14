@@ -16,7 +16,7 @@ const Login = props => {
       .post('/api/login', values)
       .then(res => {
         window.localStorage.setItem('token', res.data.payload);
-        props.history.push('/protected');
+        props.history.push('/friends');
       })
       .catch(err => console.log(err));
 

@@ -1,23 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import PrivateRoute from './components/routes/PrivateRoute';
 
+import { FriendsContext } from './contexts/friendsContext';
+
+// Components
 import Header from './components/layout/Header';
 import FriendsList from './components/friends/FriendsList';
 import Login from './components/friends/Login';
+import Home from './components/layout/Home';
 import './App.css';
 
 function App() {
+  const [friends, setFriends] = useState([]);
+
   return (
-    <Router>
-      <div className='container'>
+    <FriendsContext.Provider value={{ friends, setFriends }}>
+      <Router>
         <Header />
-        <Switch>
-          <PrivateRoute path='/protected' component={FriendsList} />
-          <Route path='/login' component={Login} />
-        </Switch>
-      </div>
-    </Router>
+        <div className='container'>
+          <Switch>
+            <PrivateRoute path='/friends' component={FriendsList} />
+            <Route path='/login' component={Login} />
+            <Route path='/' component={Home} />
+          </Switch>
+        </div>
+      </Router>
+    </FriendsContext.Provider>
   );
 }
 
