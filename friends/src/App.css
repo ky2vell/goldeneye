@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+  background: #010101;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1500px;
+  margin: auto;
+  padding: 0 30px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  height: 70vh;
+  background-image: url('images/Goldeneye2.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 55%;
+}
+
+header {
+  max-width: 1500px;
+  padding: 0 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 0;
+}
+
+#logo {
+  height: 60px;
+}
+
+.nav-right a {
+  background-color: #fff;
+  color: #010101;
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.4s opacity ease-out;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 2px;
+  line-height: 2.5rem;
+  padding: 0 1rem;
+  margin: 0 0.5rem;
+  text-transform: uppercase;
+}
+
+form.login {
+  width: 350px;
+  background: #2f2f2f;
+  padding: 3em;
+  border-radius: 1em;
+  box-shadow: 1px 1px 4px #292828;
+  padding-top: 2rem;
+}
+
+form.login img {
+  width: 100%;
+  padding: 1rem;
+}
+
+form input {
+  display: block;
+  margin-bottom: 0.8em;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+form input:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+form label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+button.submit {
+  display: block;
+  background: #00ad5a;
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.4s opacity ease-out;
+  border: none;
+  padding: 0.7em 1.2em;
+  margin-top: 1.5em;
+}
+
+button.submit:hover {
+  background: #028c4a;
+}
+
+.player-form h1,
+.loading {
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+h1.loading {
+  margin: 3rem 0;
+}
+
+.player-form {
+  max-width: 500px;
+  margin: auto;
+}
+
+.player-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3rem;
+  padding-bottom: 100px;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+}
+
+.player img {
+  object-fit: cover;
+  height: 250px;
+  object-position: top;
+  margin-bottom: 0.6rem;
+}
+
+.player span {
+  margin-bottom: 0.2rem;
+}
+
+.player button {
+  display: block;
+  font-size: 1rem;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  padding: 0.7em 1.2em;
+  margin-top: 0.8em;
+}
+
+.player button:hover {
+  background: red;
+  color: white;
+}

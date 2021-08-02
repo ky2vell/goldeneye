@@ -11,39 +11,46 @@ let nextId = 7;
 let friends = [
   {
     id: 1,
-    name: 'Rachel Green',
-    age: 30,
-    email: 'rachel@friends.com'
+    name: 'James Bond',
+    weapon: 'PP7 Special Issue',
+    img:
+      'https://vignette.wikia.nocookie.net/goldeneye/images/d/df/Bond.png/revision/latest?cb=20140418052605'
   },
   {
     id: 2,
-    name: 'Joey Tribbiani',
-    age: 34,
-    email: 'joey@friends.com'
+    name: 'Natalya Simonova',
+    weapon: 'Cougar Magnum',
+    img:
+      'https://vignette.wikia.nocookie.net/goldeneye/images/e/e1/Natalya.png/revision/latest/scale-to-width-down/300?cb=20080510025631'
   },
   {
     id: 3,
-    name: 'Chandler Bing',
-    age: 32,
-    email: 'chandler@friends.com'
+    name: 'Alec Trevelyan',
+    weapon:
+      'Walther P99, Hand Grenade, D5K Deutsche, AR33 Assault Rifle, Automatic Shotgun, ZMG (9mm)',
+    img:
+      'https://vignette.wikia.nocookie.net/goldeneye/images/1/19/Trevelyan.png/revision/latest/scale-to-width-down/180?cb=20130418102211'
   },
   {
     id: 4,
-    name: 'Ross Geller',
-    age: 32,
-    email: 'ross@friends.com'
+    name: 'Xenia Onatopp',
+    weapon: 'RC-P90, Grenade Launcher',
+    img:
+      'https://vignette.wikia.nocookie.net/goldeneye/images/a/a3/Xenia-article_image.jpg/revision/latest?cb=20140418044233'
   },
   {
     id: 5,
-    name: 'Monica Bing',
-    age: 31,
-    email: 'monica@friends.com'
+    name: 'Jaws',
+    weapon: 'Double US AR33 Assault Rifles',
+    img:
+      'https://vignette.wikia.nocookie.net/goldeneye/images/c/cd/Jaws.png/revision/latest/scale-to-width-down/300?cb=20080510023317'
   },
   {
     id: 6,
-    name: 'Phoebe Buffay-Hannigan',
-    age: 30,
-    email: 'phoebe@friends.com'
+    name: 'Oddjob',
+    weapon: 'Goldeneye',
+    img:
+      'https://vignette.wikia.nocookie.net/goldeneye/images/f/f8/Oddjob.PNG/revision/latest?cb=20081116151915'
   }
 ];
 
@@ -62,7 +69,7 @@ function authenticator(req, res, next) {
 
 app.post('/api/login', (req, res) => {
   const { username, password } = req.body;
-  if (username === 'Lambda School' && password === 'i<3Lambd4') {
+  if (username === 'Lambda School' && password === '111') {
     req.loggedIn = true;
     res.status(200).json({
       payload: token
